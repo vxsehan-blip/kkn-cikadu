@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global scroll behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Account for fixed navbar */
+}
+
+/* Ensure smooth scrolling works in all browsers */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Custom button focus styles */
+button:focus-visible {
+  outline: 2px solid #059669;
+  outline-offset: 2px;
+}
+
+/* Ensure proper contrast for accessibility */
+.btn-primary {
+  @apply bg-emerald-600 hover:bg-emerald-700 text-white;
+}
+
+.btn-secondary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white;
+}
+
+.btn-outline {
+  @apply border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-600 hover:text-white bg-white dark:bg-gray-800;
+}
+
+.btn-ghost {
+  @apply text-emerald-600 hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-900/20;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-emerald-400 hover:bg-emerald-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-emerald-600;
+}
